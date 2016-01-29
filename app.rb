@@ -8,6 +8,9 @@ set :database, 'sqlite3:barbershop.db'
 class Client < ActiveRecord::Base
 end
 
+class Barber < ActiveRecord::Base
+end
+
 configure do
   enable :sessions
 end
@@ -27,7 +30,8 @@ before '/secure/*' do
 end
 
 get '/' do
-  erb 'Can you handle a <a href="/secure/place">secret</a>?'
+  @barbers = Barber.all
+  erb :index
 end
 
 get '/login/form' do

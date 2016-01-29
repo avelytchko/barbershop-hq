@@ -1,0 +1,21 @@
+<div class="panel panel-info">
+  <div class="panel-heading">Список наших парикмахеров</div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Имя парикмахера</th>
+         </tr>
+      </thead>
+      <tbody>
+        <% @barbers.each do |barber| %>
+        <tr>
+          <th scope="row"><%= barber.id %></th>
+          <td><%= barber.name %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
