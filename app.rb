@@ -30,7 +30,7 @@ before '/secure/*' do
 end
 
 get '/' do
-  @barbers = Barber.all
+  @barbers = Barber.order "id"
   erb :index
 end
 
@@ -51,4 +51,16 @@ end
 
 get '/secure/place' do
   erb 'This is a secret place that only <%=session[:identity]%> has access to!'
+end
+
+get '/visit' do
+
+  erb :visit
+end
+
+post '/visit' do
+  c = Client.new params[:client]
+  c.save
+  erb :visit
+
 end
