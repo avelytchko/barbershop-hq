@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Список наших клиентов</div>
+  <div class="panel-body">
+  </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Имя клиента</th>
+         </tr>
+      </thead>
+      <tbody>
+        <% @clients.each do |client| %>
+        <tr>
+          <th scope="row"><%= client.id %></th>
+          <td><a href="/client/<%= client.id %>"><%= client.name %></a></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>

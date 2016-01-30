@@ -1,4 +1,4 @@
-<div class="panel panel-info">
+<div class="panel panel-default">
   <div class="panel-heading">Список наших парикмахеров</div>
   <div class="panel-body">
   </div>
@@ -13,10 +13,9 @@
         <% @barbers.each do |barber| %>
         <tr>
           <th scope="row"><%= barber.id %></th>
-          <td><%= barber.name %></td>
+          <td><a href="/barber/<%= barber.id %>"><%= barber.name %></a></td>
         </tr>
         <% end %>
       </tbody>
     </table>
-
 </div>
