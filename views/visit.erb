@@ -5,15 +5,15 @@
   <% end %>
   <div class="form-group">
     <label for="name">Ваше имя</label>
-    <input type="text" class="form-control" id="name" placeholder="Ваше имя" name="client[name]" value="">
+    <input type="text" class="form-control" id="name" placeholder="Ваше имя" name="client[name]" value="<%=@c.name%>">
   </div>
   <div class="form-group">
     <label for="date">Время визита</label>
-    <input type="text" class="form-control" id="date" placeholder="Введите дату и время" name="client[phone]" value="">
+    <input type="text" class="form-control" id="date" placeholder="Введите дату и время" name="client[phone]" value="<%=@c.phone%>">
   </div>
   <div class="form-group">
     <label for="phone">Ваш телефон</label>
-    <input type="text" class="form-control" id="phone" placeholder="Ваш телефон" name="client[datestamp]" value="">
+    <input type="text" class="form-control" id="phone" placeholder="Ваш телефон" name="client[datestamp]" value="<%=@c.datestamp%>">
   </div>
   <div class="form-group">
   <label for="selector">Парикмахер</label>
